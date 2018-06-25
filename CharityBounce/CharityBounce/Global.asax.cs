@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CharityBounce.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +13,9 @@ namespace CharityBounce
     {
         protected void Application_Start()
         {
+
+            Database.SetInitializer(new DropItLikeItsHot());
+
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
