@@ -103,6 +103,8 @@
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\NewsletterController.cs" />
     <Compile Include="Controllers\NewsletterDemoController.cs" />
+    <Compile Include="Controllers\TeamMembersController.cs" />
+    <Compile Include="Models\Registration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -118,6 +120,10 @@
     <Content Include="Views\Demo\Test.cshtml" />
     <Content Include="Views\Demo\Show.cshtml" />
     <Content Include="Views\Newsletter\Register.cshtml" />
+    <Content Include="Views\Newsletter\RegistrationComplete.cshtml" />
+    <Content Include="Views\TeamMembers\Index.cshtml" />
+    <Content Include="Views\TeamMembers\SignUp.cshtml" />
+    <Content Include="Views\TeamMembers\SignUpCompleted.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

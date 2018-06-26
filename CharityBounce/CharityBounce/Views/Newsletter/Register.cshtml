@@ -13,6 +13,8 @@
 <body>
     <h1>Register</h1>
     <form action="~/newsletter/register" method="post">
+        @Html.ValidationSummary()
+
 
         <div>
             <label>Name</label>

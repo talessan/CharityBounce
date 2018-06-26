@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityBounce.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,14 +17,29 @@ namespace CharityBounce.Controllers
             return result;
         }
 
+        //[HttpPost]
+        //public void Register(string name, string email)
+        //{
+        //    string message2 = string.Format("{0} has been registered at {1} on {2:d}", name, email, DateTime.Now);
+
+        //    string message = $"{name} has been registered at {email} on {DateTime.Now:d}"; //String interpolation
+
+        //    Response.Write(message);
+        //}
+
         [HttpPost]
-        public void Register(string name, string email)
+        public ViewResult Register(Registration registration)
         {
-            string message2 = string.Format("{0} has been registered at {1} on {2:d}", name, email, DateTime.Now);
 
-            string message = $"{name} has been registered at {email} on {DateTime.Now:d}"; //String interpolation
+            if (!ModelState.IsValid)
+            {
+                return View(); //Make them fill out the form again
+            }
 
-            Response.Write(message);
+
+            string message = $"{registration.Name} has been registered at {registration.Email} on {DateTime.Now:d}"; //String interpolation
+            ViewBag.message = message;
+            return View("RegistrationComplete");
         }
     }
 }
