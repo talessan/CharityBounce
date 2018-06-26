@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register for the Team Newsletter</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="~/newsletter/register" method="post">
+
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" value="Rob" />
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" value="Rob@example.com" />
+        </div>
+        <input type="submit" value="Register" />
+
+    </form>
+</body>
+</html>
